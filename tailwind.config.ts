@@ -8,6 +8,16 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        zoom: {
+          '0%': {scale:"1"},
+          '50%': {scale:"1.2"},
+          '100%': {scale:"1"}
+        }
+      },
+      animation: {
+        "zoom-anim": "zoom ease-in-out 1s infinite",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
