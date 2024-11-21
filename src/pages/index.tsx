@@ -5,6 +5,9 @@ import Illustration1 from "@/assets/svg/programar2.svg";
 
 import SetaBaixo from "@/assets/svg/arrowdown.svg"
 
+import ModalFullscreen from "@/pages/components/modalFullscreen"
+import React, { useEffect, useState } from "react"
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -16,7 +19,17 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+
 export default function Home() {
+  const [open, setOpen] = useState<boolean>(false);
+  useEffect(() => {
+    if(open) {
+      document.body.classList.add("overflow-y-hidden")
+    } else {
+      document.body.classList.remove("overflow-y-hidden")
+    }
+  })
+
   return (
     <div
       className={`flex flex-col gap-4 ${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
@@ -61,11 +74,19 @@ export default function Home() {
       </div>
       <div className="fixed bottom-0 w-full">
         <div className="flex justify-center p-2">
-          <div className="animate-zoom-anim shadow flex justify-center items-center bg-[#4ec963] w-[200px] h-10 rounded-xl">
+          <div onClick={()=>{setOpen(true)}} className={`${open ? "overflow-y-hidden" : "overflow-y-auto"} animate-zoom-anim shadow flex justify-center items-center bg-[#4ec963] w-[200px] h-10 rounded-xl`}>
             <h1 className="text-white text-extrabold">Entre em Contato Já!</h1>
           </div>
         </div>
       </div>
+
+      <ModalFullscreen open={open} onClose={()=> setOpen(false)}>
+        <div className="bg-white w-full h-full p-4">
+          <h1 className="text-3xl text-center">Faça o cadastro e nos envie uma mensagem!</h1>
+        </div>
+
+
+      </ModalFullscreen>
     </div>
   );
 }
