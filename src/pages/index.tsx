@@ -35,8 +35,8 @@ export default function Home() {
   })
 
   function enviarMensagem() {
-    const msg = `Nome: ${nome} + \n +Email: ${email} + \n +Chamado: ${chamado}`
-    window.open(`https://wa.me/21999055127?text=${msg}`)
+    const msg = `Nome: ${nome} + %0A + Email: ${email} + \n +Chamado: ${chamado}`
+    window.open(`https://web.whatsapp.com/send?phone=21999055127&text=${msg}%0D${nome}`)
   }
 
   return (
@@ -83,7 +83,7 @@ export default function Home() {
       </div>
       <div className="fixed bottom-0 w-full">
         <div className="flex justify-center p-2">
-          <div onClick={()=>{setOpen(true)}} className={`${open ? "overflow-y-hidden" : "overflow-y-auto"} animate-zoom-anim shadow flex justify-center items-center bg-[#4ec963] w-[200px] h-10 rounded-xl`}>
+          <div onClick={()=>{setOpen(true)}} className={`${open ? "overflow-y-hidden" : "overflow-y-auto"} cursor-pointer animate-zoom-anim shadow flex justify-center items-center bg-[#4ec963] w-[200px] h-10 rounded-xl`}>
             <h1 className="text-black font-extrabold">Entre em Contato Já!</h1>
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function Home() {
             <label className="font-semibold" htmlFor="chamado">Chamado:</label>
             <textarea onChange={(e)=>setChamado(e.target.value)} className="bg-[#2f2e41] h-[200px] rounded p-2 text-white" id="chamado"/>
           </div>
-          <div>
+          <div className="">
             <button 
             className="bg-green-500 rounded p-2 text-xl text-white font-semibold hover:bg-green-400" type="submit">
               Enviar
