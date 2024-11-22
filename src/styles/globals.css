@@ -39,3 +39,10 @@ body {
 .img {
   @apply w-full h-[200px];
 }
+
+
+
+.overflow-hidden {
+  height: 100vh;
+  overflow: hidden;
+}

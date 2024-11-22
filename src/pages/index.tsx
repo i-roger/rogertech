@@ -24,9 +24,9 @@ export default function Home() {
   const [open, setOpen] = useState<boolean>(false);
   useEffect(() => {
     if(open) {
-      document.body.classList.add("overflow-y-hidden")
+      document.body.classList.add("overflow-hidden")
     } else {
-      document.body.classList.remove("overflow-y-hidden")
+      document.body.classList.remove("overflow-hidden")
     }
   })
 
