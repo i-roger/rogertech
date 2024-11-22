@@ -75,7 +75,7 @@ export default function Home() {
       <div className="fixed bottom-0 w-full">
         <div className="flex justify-center p-2">
           <div onClick={()=>{setOpen(true)}} className={`${open ? "overflow-y-hidden" : "overflow-y-auto"} animate-zoom-anim shadow flex justify-center items-center bg-[#4ec963] w-[200px] h-10 rounded-xl`}>
-            <h1 className="text-white text-extrabold">Entre em Contato Já!</h1>
+            <h1 className="text-black font-extrabold">Entre em Contato Já!</h1>
           </div>
         </div>
       </div>
