@@ -22,6 +22,10 @@ const geistMono = localFont({
 
 export default function Home() {
   const [open, setOpen] = useState<boolean>(false);
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [chamado, setChamado] = useState('');
+
   useEffect(() => {
     if(open) {
       document.body.classList.add("overflow-hidden")
@@ -29,6 +33,11 @@ export default function Home() {
       document.body.classList.remove("overflow-hidden")
     }
   })
+
+  function enviarMensagem() {
+    const msg = `Nome: ${nome} + \n +Email: ${email} + \n +Chamado: ${chamado}`
+    window.open(`https://wa.me/21999055127?text=${msg}`)
+  }
 
   return (
     <div
@@ -81,11 +90,25 @@ export default function Home() {
       </div>
 
       <ModalFullscreen open={open} onClose={()=> setOpen(false)}>
-        <div className="bg-white w-full h-full p-4">
-          <h1 className="text-3xl text-center">Faça o cadastro e nos envie uma mensagem!</h1>
+        <div className="flex flex-col justify-center gap-4 w-full h-full bg-white p-4">
+          <h1 className="text-3xl text-center font-bold">Faça o cadastro e nos envie uma mensagem!</h1>
+        <form action={enviarMensagem} className="flex flex-col gap-2">
+          <div className="flex flex-col justify-center gap-2">
+            <label className="font-semibold" htmlFor="nome">Nome:</label>
+            <input onChange={(e)=>setNome(e.target.value)} className="bg-[#2f2e41] rounded p-2 text-white" id="nome" type="text" />
+            <label className="font-semibold" htmlFor="email">Email:</label>
+            <input onChange={(e)=>setEmail(e.target.value)} className="bg-[#2f2e41] rounded p-2 text-white" id="email" type="text" />
+            <label className="font-semibold" htmlFor="chamado">Chamado:</label>
+            <textarea onChange={(e)=>setChamado(e.target.value)} className="bg-[#2f2e41] h-[200px] rounded p-2 text-white" id="chamado"/>
+          </div>
+          <div>
+            <button 
+            className="bg-green-500 rounded p-2 text-xl text-white font-semibold hover:bg-green-400" type="submit">
+              Enviar
+            </button>
+          </div>
+        </form>
         </div>
-
-
       </ModalFullscreen>
     </div>
   );
