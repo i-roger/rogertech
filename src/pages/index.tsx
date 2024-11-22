@@ -1,9 +1,11 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 
-import Illustration1 from "@/assets/svg/programar2.svg";
+import img2 from "@/assets/svg/programar2.svg";
+import img1 from "@/assets/svg/programar.svg"
 
 import SetaBaixo from "@/assets/svg/arrowdown.svg"
+import SetaDireita from "@/assets/svg/arrowright.svg"
 
 import ModalFullscreen from "@/pages/components/modalFullscreen"
 import React, { useEffect, useState } from "react"
@@ -36,7 +38,7 @@ export default function Home() {
 
   function enviarMensagem() {
     const msg = `Nome: ${nome} + %0A + Email: ${email} + \n +Chamado: ${chamado}`
-    window.open(`https://web.whatsapp.com/send?phone=21999055127&text=${msg}%0D${nome}`)
+    window.open(`https://api.whatsapp.com/send/?phone=21999055127&text=${msg}&type=phone_number&app_absent=0`)
   }
 
   return (
@@ -54,7 +56,7 @@ export default function Home() {
       <div className="wrapper">
         <div className="section">
           <h1 className="titulo">Landing Pages</h1>
-          <Image className="img" alt="" src={Illustration1} />
+          <Image className="img" alt="" src={img2} />
           <p className="text-justify">
             É uma página web que conta com todos os elementos voltados à
             conversão, do visitante ao Lead ou da oportunidade ao cliente.
@@ -72,13 +74,35 @@ export default function Home() {
 
         <div className="section">
           <h1 className="titulo">Formatação e Manutenção de Computadores</h1>
-          <Image className="img" alt="" src={Illustration1} />
-          <h1 className="text-center text-xl font-bold">Seu computador está lento?</h1>
+          <Image className="img" alt="" src={img1} />
+          <h1 className="text-center text-xl font-bold">Seu computador está lento? <br/> Algo não funciona do jeito que deveria?</h1>
           <p className="text-justify">
-            Faremos uma análise e buscaremos a melhor forma para resolver o seu problema. Contamos com serviços como: <br/> •
-            BACKUPS • Atualização de Sistemas • Instalação de Softwares •
-            Instalação de Hardwares e muito mais...
+            Faremos uma análise e buscaremos a melhor forma para solucionar o seu problema. contamos com serviços como:
           </p>
+
+          <div className="flex flex-col items-baseline bg-[#2f2e41] rounded-xl p-4">
+          <div className="flex">
+              <Image alt="" width={16} src={SetaDireita}/>
+              <p className="text-justify text-white">Suporte Remoto</p>
+            </div>
+            <div className="flex">
+              <Image alt="" width={16} src={SetaDireita}/>
+              <p className="text-justify text-white">Backup</p>
+            </div>
+            <div className="flex text-justify">
+              <Image alt="" width={16} src={SetaDireita}/>
+              <p className="text-justify text-white">Atualização de Sistemas Operacionais</p>
+            </div>
+            <div className="flex">
+              <Image alt="" width={16} src={SetaDireita}/>
+              <p className="text-justify text-white">Instalação de Softwares</p>
+            </div>
+            <div className="flex">
+              <Image alt="" width={16} src={SetaDireita}/>
+              <p className="text-justify text-white">Instalação de Hardwares e muito mais...</p>
+            </div>
+
+          </div>
         </div>
       </div>
       <div className="fixed bottom-0 w-full">
