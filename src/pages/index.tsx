@@ -7,8 +7,10 @@ import img1 from "@/assets/svg/programar.svg"
 import SetaBaixo from "@/assets/svg/arrowdown.svg"
 import SetaDireita from "@/assets/svg/arrowright.svg"
 
-import ModalFullscreen from "@/pages/components/modalFullscreen"
+import ModalFullscreen from "@/pages/components/modal/modalFullscreen"
 import React, { useEffect, useState } from "react"
+
+import Carousel from "@/pages/components/carousel/clientes"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -37,8 +39,8 @@ export default function Home() {
   })
 
   function enviarMensagem() {
-    const msg = `Nome: ${nome} + %0A + Email: ${email} + \n +Chamado: ${chamado}`
-    window.open(`https://api.whatsapp.com/send/?phone=21999055127&text=${msg}&type=phone_number&app_absent=0`)
+    const msg = `Nome: ${nome} | + Email: ${email} | + Chamado: ${chamado}`
+    window.open(`https://api.whatsapp.com/send/?phone=+5521999055127&text=${msg}&type=phone_number&app_absent=0`)
   }
 
   return (
@@ -54,6 +56,7 @@ export default function Home() {
       </div>
 
       <div className="wrapper">
+        
         <div className="section">
           <h1 className="titulo">Landing Pages</h1>
           <Image className="img" alt="" src={img2} />
@@ -67,10 +70,12 @@ export default function Home() {
             <div className="p-4">
               <Image className="w-12 h-12 animate-bounce drop-shadow" alt="" src={SetaBaixo}/>
             </div>
+          </div>
+          <div className="flex flex-col gap-4">
             <h1 className="titulo2 text-center">Nossos Clientes</h1>
+            <Carousel/>
           </div>
         </div>  
-
 
         <div className="section">
           <h1 className="titulo">Formatação e Manutenção de Computadores</h1>
@@ -105,16 +110,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="fixed bottom-0 w-full">
-        <div className="flex justify-center p-2">
-          <div onClick={()=>{setOpen(true)}} className={`${open ? "overflow-y-hidden" : "overflow-y-auto"} cursor-pointer animate-zoom-anim shadow flex justify-center items-center bg-[#4ec963] w-[200px] h-10 rounded-xl`}>
-            <h1 className="text-black font-extrabold">Entre em Contato Já!</h1>
-          </div>
-        </div>
-      </div>
 
       <ModalFullscreen open={open} onClose={()=> setOpen(false)}>
-        <div className="flex flex-col justify-center gap-4 w-full h-full bg-white p-4">
+        <div className="flex flex-col justify-center gap-4 w-full h-full p-4">
           <h1 className="text-3xl text-center font-bold">Faça o cadastro e nos envie uma mensagem!</h1>
         <form action={enviarMensagem} className="flex flex-col gap-2">
           <div className="flex flex-col justify-center gap-2">
@@ -123,7 +121,7 @@ export default function Home() {
             <label className="font-semibold" htmlFor="email">Email:</label>
             <input onChange={(e)=>setEmail(e.target.value)} className="bg-[#2f2e41] rounded p-2 text-white" id="email" type="text" />
             <label className="font-semibold" htmlFor="chamado">Chamado:</label>
-            <textarea onChange={(e)=>setChamado(e.target.value)} className="bg-[#2f2e41] h-[200px] rounded p-2 text-white" id="chamado"/>
+            <textarea onChange={(e)=>setChamado(e.target.value)} className="resize-none bg-[#2f2e41] h-[200px] rounded p-2 text-white" id="chamado"/>
           </div>
           <div className="">
             <button 
@@ -134,6 +132,13 @@ export default function Home() {
         </form>
         </div>
       </ModalFullscreen>
+      <div className="fixed z-10 bottom-0 w-full">
+        <div className="flex justify-center p-2">
+          <div onClick={()=>{setOpen(true)}} className={`${open ? "overflow-y-hidden" : "overflow-y-auto"} cursor-pointer animate-zoom-anim shadow flex justify-center items-center bg-[#4ec963] w-[200px] h-10 rounded-xl`}>
+            <h1 className="text-black font-extrabold">Entre em Contato Já!</h1>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

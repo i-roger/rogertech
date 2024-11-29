@@ -11,11 +11,11 @@ const Modal: React.FC<propTypes> = ({open, onClose, children}) => {
     return (
     <div className={`fixed inset-0 flex justify-center items-center transition-colors ${open ? "visible" : "invisible"}`}
     onClick={onClose}>
-        <div className={`bg-white w-full h-full rounded-lg shadow p-6 transition-all duration-700
-        ${open ? "translate-y-0 ease-in-out overflow-y-" : "translate-y-full ease-in-out "}`}
+        <div className={`bg-[#ededed] w-full h-full rounded-lg shadow p-6 transition-all duration-700
+        ${open ? "translate-y-0 ease-in-out overflow-auto" : "translate-y-full ease-in-out "}`}
         onClick={(e)=> e.stopPropagation()}>
             <button
-            className="absolute top-2 right-2 py-2 px-4 border border-neutral-200 rounded-md text-gray-400 bg-white hover:bg-gray-50 hover:text-gray-600"
+            className="absolute top-2 right-2 py-2 px-4 border border-neutral-200 rounded-md text-[#73ff63] bg-[#2f2e41] hover:bg-[#504e6e]"
             onClick={onClose}>
                 X
             </button>
