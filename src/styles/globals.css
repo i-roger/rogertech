@@ -9,7 +9,7 @@ body {
 }
 
 .wrapper{
-  @apply flex flex-col mb-12 gap-10;
+  @apply flex flex-col mb-12 gap-10 z-0;
 }
 
 .section {
@@ -24,6 +24,6 @@ body {
   @apply text-2xl font-extrabold;
 }
 
-.img {
-  @apply w-full h-[200px];
+.img-carousel {
+  @apply w-[50%];
 }

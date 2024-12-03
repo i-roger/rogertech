@@ -15,7 +15,7 @@ import { Pagination } from 'swiper/modules';
 
 export default function Clientes() {
   return (
-    <div className='w-full'>
+    <div className='flex w-full'>
       <Swiper
         // spaceBetween={30}
         loop={true}
@@ -27,13 +27,13 @@ export default function Clientes() {
         className="mySwiper"
       >
         <SwiperSlide className="">
-            <a className="flex justify-center" href="https://www.canva.com/design/DAF2yHmPhZw/MGr_7U_RGgMWlLa7XI88Hw/view?utm_content=DAF2yHmPhZw&utm_campaign=designshare&utm_medium=link&utm_source=editor">
-              <Image className="" alt="EmpresaWD" src={Lanches} />
+            <a className="flex justify-center" href="https://www.lanches-one.vercel.app">
+              <Image className="img-carousel" alt="EmpresaWD" src={Lanches} />
             </a>
         </SwiperSlide>
         <SwiperSlide className="">
-            <a className="flex justify-center" href="https://www.canva.com/design/DAF2yHmPhZw/MGr_7U_RGgMWlLa7XI88Hw/view?utm_content=DAF2yHmPhZw&utm_campaign=designshare&utm_medium=link&utm_source=editor">
-              <Image className="" alt="EmpresaWD" src={TrafegoPago} />
+            <a className="flex justify-center" href="https://trafegopago-eta.vercel.app">
+              <Image className="img-carousel" alt="EmpresaWD" src={TrafegoPago} />
             </a>
         </SwiperSlide>
       </Swiper>

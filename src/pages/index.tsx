@@ -73,6 +73,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-4">
             <h1 className="titulo2 text-center">Nossos Clientes</h1>
+            <p>Clique e veja mais!</p>
             <Carousel/>
           </div>
         </div>  
