@@ -10,6 +10,9 @@ import SetaDireita from "@/assets/svg/arrowright.svg"
 import ModalFullscreen from "@/pages/components/modal/modalFullscreen"
 import React, { useEffect, useState } from "react"
 
+
+import Lanches from '@/assets/svg/clientes/flashlanches.svg';
+import TrafegoPago from '@/assets/svg/clientes/trafegopago.svg';
 import Carousel from "@/pages/components/carousel/clientes"
 
 const geistSans = localFont({
@@ -45,7 +48,7 @@ export default function Home() {
 
   return (
     <div
-      className={`flex flex-col gap-4 ${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
+      className={`flex flex-col items-center gap-4 ${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
     >
       <div className="flex w-full">
         <div className="flex w-full justify-center items-center p-4">
@@ -58,33 +61,60 @@ export default function Home() {
       <div className="wrapper">
         
         <div className="section">
-          <h1 className="titulo">Landing Pages</h1>
-          <Image className="img" alt="" src={img2} />
-          <p className="text-justify">
-            É uma página web que conta com todos os elementos voltados à
-            conversão, do visitante ao Lead ou da oportunidade ao cliente.
-            Também conhecidas como páginas de conversão ou de captura, elas são
-            item-chave nas campanhas de Marketing Digital.
-          </p>
-          <div className="flex flex-col items-center justify-center">
+          <div className="md:flex">
+            <h1 className="titulo">Landing Pages</h1>
+          </div>
+          <div className="md:flex md:items-center">
+            <Image className="img" alt="" height="400" src={img2} />
+            <p className="text-justify p-4">
+              É uma página web que conta com todos os elementos voltados à
+              conversão, do visitante ao Lead ou da oportunidade ao cliente.
+              Também conhecidas como páginas de conversão ou de captura, elas são
+              item-chave nas campanhas de Marketing Digital.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center">
             <div className="p-4">
               <Image className="w-12 h-12 animate-bounce drop-shadow" alt="" src={SetaBaixo}/>
             </div>
           </div>
-          <div className="flex flex-col gap-4">
-            <h1 className="titulo2 text-center">Nossos Clientes</h1>
-            <p>Clique e veja mais!</p>
-            <Carousel/>
+
+        <div>
+          <div className="flex flex-col items-center gap-4">
+            <div className="flex flex-col-reverse items-center md:flex-row p-4">
+              <Image className="" alt="AppLanches" width="300" src={Lanches}/>
+              <div className="flex flex-col items-center text-justify p-4 md:items-start">
+                <h1 className="titulo2">Aplicativo de lanches</h1>
+                <p>Aplicação de pedidos delivery.</p>
+              </div>
+            </div>
           </div>
-        </div>  
+
+          <div className="flex flex-col items-center gap-4">
+            <div className="flex flex-col-reverse items-center p-4 md:flex-row-reverse">
+              <Image className="" alt="AppLanches" width="300" src={TrafegoPago}/>
+              <div className="flex flex-col items-center text-justify p-4 md:items-start">
+                <h1 className="titulo2">Trafego Pago</h1>
+                <p>Este foi um de nossos projetos realizado para assinatura de serviços referente ao mercado de trafego pago.</p>
+              </div>
+            </div>
+          </div>  
+
+        </div>
 
         <div className="section">
           <h1 className="titulo">Formatação e Manutenção de Computadores</h1>
-          <Image className="img" alt="" src={img1} />
-          <h1 className="text-center text-xl font-bold">Seu computador está lento? <br/> Algo não funciona do jeito que deveria?</h1>
-          <p className="text-justify">
-            Faremos uma análise e buscaremos a melhor forma para solucionar o seu problema. contamos com serviços como:
-          </p>
+          <div className="md:flex">
+            <Image className="img" alt="" height="400" src={img1} />
+            <div className="flex flex-col justify-center gap-4">
+              <h1 className="text-center text-xl font-bold">Seu computador está lento? <br/> Algo não funciona do jeito que deveria?</h1>
+              <p className="text-justify">
+                Faremos uma análise e buscaremos a melhor forma para solucionar o seu problema. contamos com serviços como:
+              </p>
+            </div>
+          </div>
 
           <div className="flex flex-col items-baseline bg-[#2f2e41] rounded-xl p-4">
           <div className="flex">

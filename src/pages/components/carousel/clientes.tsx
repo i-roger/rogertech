@@ -15,7 +15,7 @@ import { Pagination } from 'swiper/modules';
 
 export default function Clientes() {
   return (
-    <div className='flex w-full'>
+    <div className='flex'>
       <Swiper
         // spaceBetween={30}
         loop={true}
@@ -24,11 +24,12 @@ export default function Clientes() {
           clickable: true,
         }}
         modules={[Pagination, Autoplay]}
-        className="mySwiper"
+        className="mySwiper w-[300px]"
       >
-        <SwiperSlide className="">
+        <SwiperSlide className="flex">
             <a className="flex justify-center" href="https://www.lanches-one.vercel.app">
-              <Image className="img-carousel" alt="EmpresaWD" src={Lanches} />
+              <Image className="img-carousel"  alt="EmpresaWD" src={Lanches} />
+              App de Lanches
             </a>
         </SwiperSlide>
         <SwiperSlide className="">

@@ -9,7 +9,7 @@ body {
 }
 
 .wrapper{
-  @apply flex flex-col mb-12 gap-10 z-0;
+  @apply flex flex-col mb-12 gap-10 z-0 md:w-[900px];
 }
 
 .section {
@@ -22,8 +22,4 @@ body {
 
 .titulo2 {
   @apply text-2xl font-extrabold;
-}
-
-.img-carousel {
-  @apply w-[50%];
 }
