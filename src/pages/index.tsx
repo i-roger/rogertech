@@ -13,7 +13,6 @@ import React, { useEffect, useState } from "react"
 
 import Lanches from '@/assets/svg/clientes/flashlanches.svg';
 import TrafegoPago from '@/assets/svg/clientes/trafegopago.svg';
-import Carousel from "@/pages/components/carousel/clientes"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
