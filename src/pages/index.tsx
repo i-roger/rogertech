@@ -109,8 +109,8 @@ export default function Home() {
             <Image className="img" alt="" height="400" src={img1} />
             <div className="flex flex-col justify-center gap-4">
               <h1 className="text-center text-xl font-bold">Seu computador está lento? <br/> Algo não funciona do jeito que deveria?</h1>
-              <p className="text-justify">
-                Faremos uma análise e buscaremos a melhor forma para solucionar o seu problema. contamos com serviços como:
+              <p className="text-justify px-2">
+                Faremos uma análise e buscaremos a melhor forma para solucionar o seu problema.
               </p>
             </div>
           </div>
