@@ -1,5 +1,6 @@
+'use client'
+
 import Image from "next/image";
-import localFont from "next/font/local";
 
 import img2 from "@/assets/svg/programar2.svg";
 import img1 from "@/assets/svg/programar.svg"
@@ -7,23 +8,12 @@ import img1 from "@/assets/svg/programar.svg"
 import SetaBaixo from "@/assets/svg/arrowdown.svg"
 import SetaDireita from "@/assets/svg/arrowright.svg"
 
-import ModalFullscreen from "@/pages/components/modal/modalFullscreen"
+import ModalFullscreen from "../../components/modal/modalFullscreen"
 import React, { useEffect, useState } from "react"
 
 
 import Lanches from '@/assets/svg/clientes/flashlanches.svg';
 import TrafegoPago from '@/assets/svg/clientes/trafegopago.svg';
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 
 export default function Home() {
@@ -46,17 +36,7 @@ export default function Home() {
   }
 
   return (
-    <div
-      className={`flex flex-col items-center gap-4 ${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}
-    >
-      <div className="flex w-full">
-        <div className="flex w-full justify-center items-center p-4">
-          <h1 className="bg-[#2f2e41] p-4 rounded-xl text-[38px] text-[#73ff63] shadow font-extrabold">
-            RogerTech
-          </h1>
-        </div>
-      </div>
-
+    <>
       <div className="wrapper">
         
         <div className="section">
@@ -164,11 +144,11 @@ export default function Home() {
       </ModalFullscreen>
       <div className="fixed z-10 bottom-0 w-full">
         <div className="flex justify-center p-2">
-          <div onClick={()=>{setOpen(true)}} className={`${open ? "overflow-y-hidden" : "overflow-y-auto"} cursor-pointer animate-zoom-anim shadow flex justify-center items-center bg-[#4ec963] w-[200px] h-10 rounded-xl`}>
+          <div onClick={()=>{setOpen(true)}} className={`${open ? "overflow-y-hidden" : "overflow-y-auto"} cursor-pointer animate-zoom-anim animate-zoom-anim shadow flex justify-center items-center bg-[#4ec963] w-[200px] h-10 rounded-xl`}>
             <h1 className="text-black font-extrabold">Entre em Contato Já!</h1>
           </div>
         </div>
       </div>
-    </div>
+      </>
   );
 }

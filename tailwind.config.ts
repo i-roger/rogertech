@@ -1,7 +1,9 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/*.{js,ts,jsx,tsx,mdx}",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,13 +12,13 @@ export default {
     extend: {
       keyframes: {
         zoom: {
-          '0%': {scale:"1"},
-          '50%': {scale:"1.2"},
-          '100%': {scale:"1"}
-        }
+          "0%": {scale:"1"},
+          "50%": {scale:"1.02"},
+          "100%": {scale:"1"}
+        },
       },
       animation: {
-        "zoom-anim": "zoom ease-in-out 1s infinite",
+        "zoom-anim": "zoom 3s infinite",
       },
       colors: {
         background: "var(--background)",
@@ -25,4 +27,5 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config;
+};
+export default config;

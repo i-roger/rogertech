@@ -1,11 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 body {
   color: #171717;
   background: #ededed;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .wrapper{
