@@ -38,50 +38,6 @@ export default function Home() {
   return (
     <>
       <div className="wrapper">
-        
-        <div className="section">
-          <div className="md:flex">
-            <h1 className="titulo">Landing Pages</h1>
-          </div>
-          <div className="md:flex md:items-center">
-            <Image className="img" alt="" height="400" src={img2} />
-            <p className="text-justify p-4">
-              É uma página web que conta com todos os elementos voltados à
-              conversão, do visitante ao Lead ou da oportunidade ao cliente.
-              Também conhecidas como páginas de conversão ou de captura, elas são
-              item-chave nas campanhas de Marketing Digital.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-col items-center justify-center">
-            <div className="p-4">
-              <Image className="w-12 h-12 animate-bounce drop-shadow" alt="" src={SetaBaixo}/>
-            </div>
-          </div>
-
-        <div>
-          <div className="flex flex-col items-center gap-4">
-            <div className="flex flex-col-reverse items-center md:flex-row p-4">
-              <Image className="" alt="AppLanches" width="300" src={Lanches}/>
-              <div className="flex flex-col items-center text-justify p-4 md:items-start">
-                <h1 className="titulo2">Aplicativo de lanches</h1>
-                <p>Aplicação de pedidos delivery.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center gap-4">
-            <div className="flex flex-col-reverse items-center p-4 md:flex-row-reverse">
-              <Image className="" alt="AppLanches" width="300" src={TrafegoPago}/>
-              <div className="flex flex-col items-center text-justify p-4 md:items-start">
-                <h1 className="titulo2">Trafego Pago</h1>
-                <p>Este foi um de nossos projetos realizado para assinatura de serviços referente ao mercado de trafego pago.</p>
-              </div>
-            </div>
-          </div>  
-
-        </div>
 
         <div className="section">
           <h1 className="titulo">Formatação e Manutenção de Computadores</h1>
@@ -118,6 +74,50 @@ export default function Home() {
             </div>
 
           </div>
+        </div>
+        
+        <div className="section">
+          <div className="flex md:flex">
+            <h1 className="titulo">Crie sua Landing Page já!</h1>
+          </div>
+          <div className="md:flex md:items-center">
+            <Image className="img" alt="" height="400" src={img2} />
+            <p className="text-justify p-4">
+              Landing page é uma página web que conta com todos os elementos voltados à
+              conversão, do visitante ao Lead ou da oportunidade ao cliente.
+              Também conhecidas como páginas de conversão ou de captura, elas são
+              item-chave nas campanhas de Marketing Digital.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center">
+            <div className="p-4">
+              <Image className="w-12 h-12 animate-bounce drop-shadow" alt="" src={SetaBaixo}/>
+            </div>
+        </div>
+
+        <div className="flex flex-col items-center gap-4">
+            <div className="flex flex-col-reverse items-center p-4 md:flex-row-reverse">
+              <Image className="" alt="AppLanches" width="300" src={TrafegoPago}/>
+              <div className="flex flex-col items-center text-justify p-4 md:items-start">
+                <h1 className="titulo2">Trafego Pago</h1>
+                <p>Este foi um de nossos projetos de landing page, realizado para assinatura de serviços referente ao mercado de trafego pago.</p>
+              </div>
+            </div>
+          </div>  
+
+        <div>
+          <div className="flex flex-col items-center gap-4">
+            <div className="flex flex-col-reverse items-center md:flex-row p-4">
+              <Image className="" alt="AppLanches" width="300" src={Lanches}/>
+              <div className="flex flex-col items-center text-justify p-4 md:items-start">
+                <h1 className="titulo2">Aplicativo para vendas online</h1>
+                <p>Integramos um sistema para vendas online, onde o cliente adiciona os itens ao carrinho de compras e ao finalizar o pedido será enviado via Whatsapp.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
