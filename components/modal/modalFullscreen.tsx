@@ -15,7 +15,7 @@ const Modal: React.FC<propTypes> = ({open, onClose, children}) => {
         ${open ? "translate-y-0 ease-in-out overflow-auto" : "translate-y-full ease-in-out "}`}
         onClick={(e)=> e.stopPropagation()}>
             <button
-            className="absolute top-2 right-2 py-2 px-4 border border-neutral-200 rounded-md text-[#73ff63] bg-[#2f2e41] hover:bg-[#504e6e]"
+            className="cursor-pointer absolute top-2 right-2 py-2 px-4 border border-neutral-200 rounded-md text-[#73ff63] bg-[#2f2e41] hover:bg-[#504e6e]"
             onClick={onClose}>
                 X
             </button>

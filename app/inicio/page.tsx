@@ -123,7 +123,7 @@ export default function Home() {
 
       <ModalFullscreen open={open} onClose={()=> setOpen(false)}>
         <div className="flex flex-col justify-center gap-4 w-full h-full p-4">
-          <h1 className="text-3xl text-center font-bold">Faça o cadastro e nos envie uma mensagem!</h1>
+          <h1 className="text-3xl text-center font-bold">Envie uma mensagem para o nosso whatsapp!</h1>
         <form action={enviarMensagem} className="flex flex-col gap-2">
           <div className="flex flex-col justify-center gap-2">
             <label className="font-semibold" htmlFor="nome">Nome:</label>
@@ -135,13 +135,14 @@ export default function Home() {
           </div>
           <div className="">
             <button 
-            className="bg-green-500 rounded p-2 text-xl text-white font-semibold hover:bg-green-400" type="submit">
+            className="cursor-pointer bg-green-500 rounded p-2 text-xl text-white font-semibold hover:bg-green-400" type="submit">
               Enviar
             </button>
           </div>
         </form>
         </div>
       </ModalFullscreen>
+
       <div className="fixed z-10 bottom-0 w-full">
         <div className="flex justify-center p-2">
           <div onClick={()=>{setOpen(true)}} className={`${open ? "overflow-y-hidden" : "overflow-y-auto"} cursor-pointer animate-zoom-anim animate-zoom-anim shadow flex justify-center items-center bg-[#4ec963] w-[200px] h-10 rounded-xl`}>
