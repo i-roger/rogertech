@@ -11,7 +11,7 @@ export default function Portfolio () {
           <div className="flex w-full flex-col gap-2 px-4 py-2">
             <p>Este é um WebApp para ajudar a todos os corredores que desejam planejar melhor seus treinos, seja na esteira ou na rua. <br/>
             Temos Ferramentas como calculadora de "Pace estimado", "Tempo estimado", "Distância estimada", "Intensidade de corrida" e 
-            conversões como "Pace para Km/h", utilizado muito por quem treina em esteiras.</p>
+            conversões como "Pace para Km/h", muito utilizado por quem treina em esteiras.</p>
             <Button name="Visitar Projeto" href="https://raiolaranja.vercel.app" cor="bg-[#4ec963] text-black font-semibold"/>
           </div>
         </div>
