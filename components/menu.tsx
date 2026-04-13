@@ -9,7 +9,6 @@ export default function Menu() {
 
     const navLinks = [
         {name: "Inicio", href:"/inicio"},
-        {name: "Portfolio", href:"/portfolio"},
     ]
     return (
         <div className="flex w-full justify-center items-center p-4">

@@ -1,4 +1,4 @@
-import Button from "../../components/btn";
+import Button from "../btn";
 
 export default function Portfolio () {
     return(
