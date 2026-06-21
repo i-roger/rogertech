@@ -1,22 +1,5 @@
 @import "tailwindcss";
 
 body {
-  color: #171717;
-  background: #ededed;
-}
-
-.wrapper{
-  @apply flex flex-col mb-12 gap-10 z-0 md:w-[900px];
-}
-
-.section {
- @apply flex flex-col gap-4 p-4;
-}
-
-.titulo {
-  @apply text-3xl font-extrabold;
-}
-
-.titulo2 {
-  @apply text-2xl font-extrabold;
+  background-color: #09090b;
 }
